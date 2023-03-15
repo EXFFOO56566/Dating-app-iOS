@@ -1,0 +1,11 @@
+framework module QuickdateSDK {
+  umbrella header "QuickdateSDK.h"
+
+  export *
+  module * { export * }
+}
+
+module QuickdateSDK.Swift {
+    header "QuickdateSDK-Swift.h"
+    requires objc
+}

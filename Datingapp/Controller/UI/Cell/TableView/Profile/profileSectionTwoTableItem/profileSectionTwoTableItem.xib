@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Regular.otf">
+            <string>Poppins-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="profileSectionTwoTableItem" rowHeight="64" id="zPD-VZ-tOB" customClass="profileSectionTwoTableItem" customModule="QuickDate" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="64"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zPD-VZ-tOB" id="Sj1-IR-vc7">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="64"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fav_ic" translatesAutoresizingMaskIntoConstraints="NO" id="E3A-cg-0LK">
+                        <rect key="frame" x="24" y="12" width="41" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="E3A-cg-0LK" secondAttribute="height" constant="1" id="j2d-Kk-tgY"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favorite" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qnt-tl-xqU">
+                        <rect key="frame" x="89" y="0.0" width="309" height="28"/>
+                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Display all your favourite users" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qIF-6U-xK8">
+                        <rect key="frame" x="89" y="28.5" width="309" height="27.5"/>
+                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
+                        <color key="textColor" red="0.478376627" green="0.4784628749" blue="0.47843137250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="Qnt-tl-xqU" secondAttribute="trailing" constant="16" id="02D-Oh-5o7"/>
+                    <constraint firstAttribute="trailing" secondItem="qIF-6U-xK8" secondAttribute="trailing" constant="16" id="6sT-iz-qBH"/>
+                    <constraint firstItem="qIF-6U-xK8" firstAttribute="height" secondItem="Qnt-tl-xqU" secondAttribute="height" id="8me-On-axi"/>
+                    <constraint firstAttribute="bottom" secondItem="E3A-cg-0LK" secondAttribute="bottom" constant="12" id="DG6-H0-QvY"/>
+                    <constraint firstItem="E3A-cg-0LK" firstAttribute="leading" secondItem="Sj1-IR-vc7" secondAttribute="leading" constant="24" id="HJp-ai-8IH"/>
+                    <constraint firstItem="Qnt-tl-xqU" firstAttribute="leading" secondItem="E3A-cg-0LK" secondAttribute="trailing" constant="24" id="IHl-hF-aqN"/>
+                    <constraint firstItem="Qnt-tl-xqU" firstAttribute="top" secondItem="Sj1-IR-vc7" secondAttribute="top" id="MgP-E7-snM"/>
+                    <constraint firstItem="qIF-6U-xK8" firstAttribute="leading" secondItem="E3A-cg-0LK" secondAttribute="trailing" constant="24" id="Ssw-LF-fAC"/>
+                    <constraint firstItem="qIF-6U-xK8" firstAttribute="top" secondItem="Qnt-tl-xqU" secondAttribute="bottom" constant="0.5" id="eis-zN-a1e"/>
+                    <constraint firstAttribute="bottom" secondItem="qIF-6U-xK8" secondAttribute="bottom" constant="8" id="fl5-Hb-rbY"/>
+                    <constraint firstItem="E3A-cg-0LK" firstAttribute="top" secondItem="Sj1-IR-vc7" secondAttribute="top" constant="12" id="x87-pM-KAV"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="itemIconImage" destination="E3A-cg-0LK" id="V8W-Kg-UUC"/>
+                <outlet property="labelItemInfo" destination="qIF-6U-xK8" id="Sut-m8-fnS"/>
+                <outlet property="labelItemTitle" destination="Qnt-tl-xqU" id="R1G-Kz-lor"/>
+            </connections>
+            <point key="canvasLocation" x="139" y="183"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="fav_ic" width="42.5" height="42.5"/>
+    </resources>
+</document>

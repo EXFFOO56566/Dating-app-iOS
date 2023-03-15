@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HotOrNotCollectionItem" id="gTV-IL-0wX" customClass="HotOrNotCollectionItem" customModule="QuickDate" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="275" height="223"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="275" height="223"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G5e-j7-YLm">
+                        <rect key="frame" x="0.0" y="16" width="265" height="160"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="160" id="eIP-Tg-YEf"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusV">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="4fp-mj-s05">
+                        <rect key="frame" x="52.5" y="141" width="160" height="70"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d01-fM-LIl">
+                                <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                <color key="backgroundColor" red="0.050980392159999999" green="0.1019607843" blue="0.57254901960000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="P5T-Ov-Fpn"/>
+                                    <constraint firstAttribute="height" constant="70" id="ySx-X2-DeN"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="20" minY="20" maxX="20" maxY="20"/>
+                                <state key="normal" image="heartArrow"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusV">
+                                        <real key="value" value="35"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="notPressed:" destination="gTV-IL-0wX" eventType="touchUpInside" id="ahP-Wf-ikS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sav-W8-bu9">
+                                <rect key="frame" x="90" y="0.0" width="70" height="70"/>
+                                <color key="backgroundColor" red="0.70196078429999997" green="0.1960784314" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <inset key="imageEdgeInsets" minX="25" minY="25" maxX="25" maxY="20"/>
+                                <state key="normal" image="Hot"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusV">
+                                        <real key="value" value="35"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="hotPressed:" destination="gTV-IL-0wX" eventType="touchUpInside" id="6DA-cD-bjA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Sav-W8-bu9" firstAttribute="height" secondItem="d01-fM-LIl" secondAttribute="height" id="Urj-bg-93j"/>
+                            <constraint firstItem="Sav-W8-bu9" firstAttribute="width" secondItem="d01-fM-LIl" secondAttribute="width" id="Vms-cg-hwI"/>
+                        </constraints>
+                    </stackView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BAY-vc-R1F">
+                        <rect key="frame" x="0.0" y="101" width="265" height="24.5"/>
+                        <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="17"/>
+                        <color key="textColor" red="0.95292967559999997" green="0.95293515920000005" blue="0.95294982189999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="G5e-j7-YLm" secondAttribute="trailing" constant="10" id="1Fh-Y7-DCY"/>
+                <constraint firstItem="BAY-vc-R1F" firstAttribute="top" secondItem="G5e-j7-YLm" secondAttribute="bottom" constant="-75" id="BfS-kc-xsa"/>
+                <constraint firstItem="G5e-j7-YLm" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" id="Dbp-Ur-1Oi"/>
+                <constraint firstItem="4fp-mj-s05" firstAttribute="top" secondItem="G5e-j7-YLm" secondAttribute="bottom" constant="-35" id="Hma-Rv-vcW"/>
+                <constraint firstItem="BAY-vc-R1F" firstAttribute="trailing" secondItem="G5e-j7-YLm" secondAttribute="trailing" id="Y8K-iQ-U2o"/>
+                <constraint firstItem="4fp-mj-s05" firstAttribute="centerX" secondItem="G5e-j7-YLm" secondAttribute="centerX" id="aO5-nM-jjv"/>
+                <constraint firstItem="BAY-vc-R1F" firstAttribute="leading" secondItem="G5e-j7-YLm" secondAttribute="leading" id="bpV-Ts-P44"/>
+                <constraint firstItem="G5e-j7-YLm" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="16" id="gck-fb-X8V"/>
+            </constraints>
+            <size key="customSize" width="275" height="223"/>
+            <connections>
+                <outlet property="ProfileImaGE" destination="G5e-j7-YLm" id="0K7-I1-2nM"/>
+                <outlet property="usrenameLabel" destination="BAY-vc-R1F" id="x0j-dg-I8Q"/>
+            </connections>
+            <point key="canvasLocation" x="205.07246376811597" y="165.73660714285714"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Hot" width="482" height="594"/>
+        <image name="heartArrow" width="512" height="512"/>
+    </resources>
+</document>
